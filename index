@@ -1,0 +1,61 @@
+<!--文档类型-->
+<!DOCTYPE html>
+<!--语言：英语-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">  <!--指定字符编码-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">       <!--用于指定 Internet Explorer (IE) 浏览器的文档模式和兼容模式-->
+    <!--用于定义网页在各种设备（尤其是移动设备）上的显示方式。它专门用来控制viewport，也就是网页在用户浏览器窗口中的可见区域。-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="connect()">Connect wallet</button>
+        <div>ChainId: <span id="chain_id"></span></div>
+        <div>BlockNumber: <span id="block_number"></span></div>
+        <div>BlockTimestamp: <span id="block_timestamp"></span></div>
+        <div>Current Account: <span id="account_address"></span></div>
+        <div>Current Balance: <span id="account_balance"></span></div>
+
+        <hr />
+        <input type="text" id="contract_address" />
+        <button onclick="read()">Read Contract</button>
+
+        <div>TokenSymbol: <span id="token_symbol"></span></div>
+        <div>TotalSupply: <span id="token_totalSupply"></span></div>
+        <div>Account Balance: <span id="token_balance"></span></div>
+
+        <hr />
+        <input type="text" id="to_address" />
+        <input type="text" id="transfer_amount" />
+        <button onclick="transfer()">Transfer</button>
+
+        <div>estimateGas: <span id="estimate_gas"></span></div>
+        <div>gasPrice: <span id="gas_price"></span></div>
+        <div>txHash: <span id="tx_hash"></span></div>
+
+        <hr />
+        <input type="text" id="mint_address" />
+        <input type="text" id="mint_amount" />
+        <button onclick="mint()">Mint</button>
+
+        <div>estimateGas: <span id="mint_estimate_gas"></span></div>
+        <div>gasPrice: <span id="mint_gas_price"></span></div>
+        <div>txHash: <span id="mint_tx_hash"></span></div>
+
+        <hr />
+        <input type="text" id="burn_amount" />
+        <button onclick="burn()">Burn</button>
+
+        <div>estimateGas: <span id="burn_estimate_gas"></span></div>
+        <div>gasPrice: <span id="burn_gas_price"></span></div>
+        <div>txHash: <span id="burn_tx_hash"></span></div>
+
+
+    </div>
+    <script src="./js/web3.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
